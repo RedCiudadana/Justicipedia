@@ -2,7 +2,6 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const nodeSass = require('node-sass');
 
 module.exports = function(defaults) {
   let envIsDevelopment = process.env.EMBER_ENV === "development";
@@ -16,13 +15,7 @@ module.exports = function(defaults) {
     'ember-bootstrap': {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
-      // No incluir el archivo de boostrap.css porque se incluyen el archivo app.scss.
-      'importBootstrapCSS': false
-    },
-
-    sassOptions: {
-      // Utilizar nodeSass, es drasticamente más rapido.
-      implementation: nodeSass
+      'importBootstrapCSS': true
     },
 
     ifa: {
@@ -36,17 +29,12 @@ module.exports = function(defaults) {
       fingerprintAssetMap: true
     },
 
-    'ember-font-awesome': {
-      removeUnusedIcons: true
-    },
-
-    prember: {
-      urls: [
-        // '/',
-        // '/perfiles',
-        // '/instituciones?sector=justicia', #Netlify dont support this because generate a folder name invalid '?'
-        // '/elecciones'
-      ]
+    postcssOptions: {
+      compile: {
+        plugins: [
+          require('tailwindcss')
+        ]
+      }
     }
 
   });

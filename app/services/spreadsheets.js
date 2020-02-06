@@ -4,7 +4,6 @@ import config from '../config/environment';
 import fetch from 'fetch';
 import { Promise } from 'rsvp';
 import { isNone } from '@ember/utils';
-import debugLogger from 'ember-debug-logger';
 
 /**
  * Servicios para obtener datos desde /static-files/ or Google's spreadsheets, según la configuración en 'environment'.
@@ -17,8 +16,6 @@ import debugLogger from 'ember-debug-logger';
  * spreadsheets: service()
  */
 export default Service.extend({
-
-  log: debugLogger(),
 
   /**
    * URL de la hoja de datos (perfiles, partidos, etc). Luego se obtiene de 'environment'

@@ -3,60 +3,65 @@
 {{title "Justiciapedia - RedCiudadana"}}
 
 {{!-- Navbar --}}
-<BsNavbar id="navbar" @backgroundColor="primary" @type="dark" @position="sticky-top" @fluid={{true}} as |navbar|>
+<nav
+  id="navbar"
+  class="navbar sticky-top navbar-dark navbar-expand-lg bg-primary"
+>
   <div class="navbar-header">
-    {{navbar.toggle}}
+    <button class="navbar-toggler collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <LinkTo @route="application" class="navbar-brand">
       <img src="logo-brand.png" class="img-responsive" title={{nombreApp}} alt="Congreso">
     </LinkTo>
   </div>
 
-  <navbar.content>
+  <div class="navbar-collapse collapse">
     {{!-- @TODO Hacer funcionar active en nav.item --}}
-    <navbar.nav @justified={{false}} type="pills" class="ml-auto" as |nav|>
+    {{!-- @TODO Dejar de utilizar listar en navbar --}}
+    <ul class="nav navbar-nav ml-auto" type="pills">
       {{#each model.navbarLinks as |link|}}
         <nav.item @active={{false}}>
           <LinkTo @route={{link.route}}>{{link.title}}</LinkTo>
         </nav.item>
       {{/each}}
 
-      <nav.item @active={{false}} class="mt-1">
+      <li class="nav-item mt-1">
         <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
           Sector Justicia
         </LinkTo>
-      </nav.item>
+      </li>
 
-      <nav.item @active={{false}} class="mt-1">
+      <li class="nav-item mt-1">
         <LinkTo @route="perfiles" @model={{"elecciones"}}>
           Comisiones de Postulación
         </LinkTo>
-      </nav.item>
+      </li>
 
-      <nav.item @active={{false}} class="mt-1">
+      <li class="nav-item mt-1">
         <LinkTo @route="perfiles" @model="perfiles">
           Perfiles
         </LinkTo>
-      </nav.item>
+      </li>
 
-      <nav.item @active={{false}} class="mt-1">
+      <li class="nav-item mt-1">
         <LinkTo @route="preguntas">
           Preguntas frecuentes
         </LinkTo>
-      </nav.item>
+      </li>
 
-      <nav.item class="no-hover">
+      <li class="nav-item mt-1 no-hover">
         <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener">
           <img src="img/icono-fb-white.png" alt="Facebook" height="35px" width="35px">
         </a>
         <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener">
           <img src="img/icono-tw-white.png" alt="Twitter" height="35px" width="35px">
         </a>
-      </nav.item>
-
-    </navbar.nav>
-  </navbar.content>
-</BsNavbar>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 {{!-- Outlet --}}
 <main>
