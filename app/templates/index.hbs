@@ -1,53 +1,53 @@
-<div class="w-100 bg-primary text-white">
-  <div class="container-fluid py-5">
-    <div class="row py-5" id="index-banner">
-      <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left">
+<div class="w-full bg-blue text-white">
+  <div class="container mx-auto mx-auto py-5">
+    <div class="flex flex-wrap py-5" id="index-banner">
+      <div class="w-full text-center lg:mx-1/6 lg:w-2/5 pr-4 pl-4 text-lg-left">
         <h3>
           Conoce a las instituciones y a los<br>
           funcionarios públicos del sector de<br>
           Justicia de Guatemala
         </h3>
       </div>
-      <div class="col-12 col-lg-5">
-        <img src="/img/slider.png" alt="Corte Suprema de Justicia" class="img-responsive w-100 pt-5 m-lg-0">
+      <div class="w-full lg:w-2/5 pr-4 pl-4">
+        <img src="/img/slider.png" alt="Corte Suprema de Justicia" class="img-responsive w-full pt-5 lg:m-0">
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid bg-light py-5">
-  <div class="row py-5">
-    <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left">
+<div class="container mx-auto mx-auto bg-grey-lightest py-5">
+  <div class="flex flex-wrap py-5">
+    <div class="w-full text-center lg:mx-1/6 lg:w-2/5 pr-4 pl-4 text-lg-left">
       <h2 class="mb-4">¿Qué es Justiciapedia?</h2>
       <p>
         Es una herramienta interactiva y sencilla que busca acercar a la ciudadanía con el sector justicia, hacer que sea comprensible un tema que nos debe interesar a todos y todas.
       </p>
     </div>
-    <div class="col-12 col-lg-5 text-center">
+    <div class="w-full lg:w-2/5 pr-4 pl-4 text-center">
       <div class="video-container">
-        <iframe class="mt-5 mt-md-0" width="560" height="315" src="https://www.youtube.com/embed/cs-sh5ez5Iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="mt-5 md:mt-0" width="560" height="315" src="https://www.youtube.com/embed/cs-sh5ez5Iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid py-5">
-  <div class="row py-5 text-center">
-    <div class="col-12">
+<div class="container mx-auto mx-auto py-5">
+  <div class="flex flex-wrap py-5 text-center">
+    <div class="w-full">
       <h2 class="mb-4 pb-4">Elija la categoría de tu interes</h2>
     </div>
-    <div class="col-12 offset-lg-1 col-lg-5 border-right">
-      <h2 class="my-5 py-0 py-md-5">
+    <div class="w-full lg:mx-1/6 lg:w-2/5 pr-4 pl-4 border-r">
+      <h2 class="my-5 py-0 md:p y-5">
         <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
-          <img src="/img/i-justicia.png" alt="Mazo" class="mr-lg-3">
-          <br class="d-block d-md-none">
+          <img src="/img/i-justicia.png" alt="Mazo" class="lg:mr-3">
+          <br class="block md:hidden">
           Sector Justicia
         </LinkTo>
       </h2>
     </div>
-    <div class="col-12 col-lg-5">
-      <h2 class="my-5 py-0 py-md-5">
+    <div class="w-full lg:w-2/5 pr-4 pl-4">
+      <h2 class="my-5 py-0 md:p y-5">
         <LinkTo @route="perfiles" @model={{"elecciones"}}>
-          <img src="/img/i-personas-d.png" alt="Edificio" class="mr-lg-3">
-          <br class="d-block d-md-none">
+          <img src="/img/i-personas-d.png" alt="Edificio" class="lg:mr-3">
+          <br class="block md:hidden">
           Comisiones de Postulación
         </LinkTo>
       </h2>

@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8 py-5">
+<div class="container mx-auto">
+  <div class="flex flex-wrap justify-center">
+    <div class="md:w-2/3 pr-4 pl-4 py-5">
       <h2>Buscar perfiles</h2>
       <PowerSelect
         @placeholder="Busqueda"
@@ -12,7 +12,7 @@
       </PowerSelect>
       {{#if (eq model.firstObject._internalModel.modelName "profile")}}
         <PowerSelect
-          class="my-auto ml-2 w-100"
+          class="my-auto ml-2 w-full"
           @placeholder="Filtrar por institución"
           @searchEnabled={{true}}
           @searchField="nombre"
@@ -22,12 +22,12 @@
           @onChange={{action (mut this.inInstitution)}} as |profile|>
           {{profile.nombre}}
         </PowerSelect>
-        <nav class="nav justify-content-center">
-          <div class="input-group nav-item bg-light rounded-pill px-3 py-2 w-auto mx-2">
+        <nav class="flex flex-wrap list-reset pl-0 mb-0 justify-center">
+          <div class="relative flex items-stretch w-full  bg-grey-lightest rounded-pill px-3 py-2 w-auto mx-2">
             <label class="my-auto" for="isMujer">Mujer</label>
             <Input class="my-auto ml-2" @type="checkbox" @checked={{this.isMujer}} />
           </div>
-          <div class="input-group nav-item bg-light rounded-pill px-3 py-2 w-auto mx-2">
+          <div class="relative flex items-stretch w-full  bg-grey-lightest rounded-pill px-3 py-2 w-auto mx-2">
             <label class="my-auto" for="isVaron">Hombre</label>
             <Input class="my-auto ml-2" @type="checkbox" @checked={{this.isVaron}} />
           </div>
@@ -42,29 +42,29 @@
   @profiles={{this.profiles}}
   />
 
-<div class="w-100 bg-light">
-  <div class="container">
-    <div class="row text-center">
+<div class="w-full bg-grey-lightest">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap text-center">
       <div class="mx-auto">
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
+          <ul class="flex list-reset pl-0 rounded">
             <li class="page-item">
-              <button class="page-link" href="#" aria-label="Previous" {{on "click" this.prevPage}}>
+              <button class="relative block py-2 px-3 -ml-px leading-normal text-blue bg-white border border-grey no-underline hover:text-blue-darker hover:bg-grey-light" href="#" aria-label="Previous" {{on "click" this.prevPage}}>
                 <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
+                <span class="">Previous</span>
               </button>
             </li>
             {{#each this.pages as |page|}}
               <li class="page-item {{if (eq this.page page) "active"}}">
-                <button class="page-link" {{on "click" (fn this.selectPage page)}}>
+                <button class="relative block py-2 px-3 -ml-px leading-normal text-blue bg-white border border-grey no-underline hover:text-blue-darker hover:bg-grey-light" {{on "click" (fn this.selectPage page)}}>
                   {{page}}
                 </button>
               </li>
             {{/each}}
             <li class="page-item">
-              <button class="page-link" href="#" aria-label="Next" {{on "click" this.nextPage}}>
+              <button class="relative block py-2 px-3 -ml-px leading-normal text-blue bg-white border border-grey no-underline hover:text-blue-darker hover:bg-grey-light" href="#" aria-label="Next" {{on "click" this.nextPage}}>
                 <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
+                <span class="">Next</span>
               </button>
             </li>
           </ul>
@@ -73,16 +73,16 @@
     </div>
     {{#if (eq model.firstObject._internalModel.modelName "institution")}}
       {{!-- Organigrama --}}
-      <div class="row">
-        <div class="col-12">
+      <div class="flex flex-wrap">
+        <div class="w-full">
           <div class="panel">
-            <div class="header d-flex bg-primary">
+            <div class="header flex bg-blue">
               <img src="img/i-orgchart.png" alt="Iconos de personas">
               <h3>Sector Justicia</h3>
             </div>
             <div>
               <div class="body p-4">
-                <Orgchart class="w-100 bg-red" />
+                <Orgchart class="w-full bg-red" />
               </div>
             </div>
           </div>
