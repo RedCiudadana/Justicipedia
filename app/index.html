@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Justiciapedia</title>
+    <meta name="description" content="">
 
     {{content-for "head"}}
 
@@ -11,44 +14,13 @@
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/justiciapedia.css">
 
     {{content-for "head-footer"}}
-
-    <!-- HTML Meta Tags -->
-    <title>Justiciapedia - Red Ciudadana</title>
-    <meta name="description" content="Informate sobre la elección General de Guatemala">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="http://redciudadana.org/">
-    <meta name="keywords" content="Justiciapedia, Red Ciudadana, Guatemala, Candidatos, elección, elecciones">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@RedXGuate">
-    <meta name="twitter:description" content="Justiciapedia - Red Ciudadana es una aplicación destinada a la transparencia en materia de funcionarios públicos. ">
-    <meta name="twitter:title" content="Justiciapedia - Red Ciudadana">
-    <meta name="twitter:image" content="http://Justiciapedia/img/social/social-preview.png">
-    <meta name="twitter:image:alt" content="Justiciapedia - Red Ciudadana">
-    <meta name="twitter:author" content="https://twitter.com/RedxGuate">
-
-    <!-- Facebook - Open graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Conoce todo sobre el Justiciapedia - Red Ciudadana">
-    <meta property="og:site_name" content="Justiciapedia - Red Ciudadana">
-    <meta property="og:url" content="https://justicipedia.org/">
-    <meta property="og:image" content="http://justicipedia.org/img/social/social-preview.png">
-    <meta property="og:image:secure_url" content="http://justicipedia.org/img/social/social-preview.png"/>
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="Justiciapedia - Red Ciudadana por Red Ciudadana" />
-    <meta property="article:author" content="https://www.facebook.com/Redciudadanagt/">
-
   </head>
-  <body>
+  <body class="bg-light text-primary">
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/justiciapedia.js"></script>
 
     {{content-for "body-footer"}}
-    <!-- <script src="https://my.hellobar.com/64300bf7e023961537f9fbe8ad297ceb8440953a.js" type="text/javascript" charset="utf-8" async="async"></script> -->
   </body>
 </html>

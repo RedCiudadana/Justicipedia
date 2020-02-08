@@ -3,116 +3,35 @@
 {{title "Justiciapedia - RedCiudadana"}}
 
 {{!-- Navbar --}}
-<nav class="flex items-center justify-between flex-wrap bg-white text-primary p-6" role="navigation">
-  <div class="flex items-center flex-shrink-0 mr-6">
-    <span class="font-semibold text-xl tracking-tight">Justiciapedía</span>
-  </div>
-  <div class="block lg:hidden">
-    <button class="flex items-center px-3 py-2 border rounded text-primary border-primary hover:text-gray hover:border-gray">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div class="text-sm lg:flex-grow text-right">
-      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-primary hover:text-gray-900" @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
+<nav class="bg-white" role="navigation" aria-label="Main">
+  <div class="block sm:flex flex-wrap items-center justify-center lg:justify-between py-4 lg:w-10/12 lg:mx-auto">
+    {{!-- Brand --}}
+    <div class="flex-shrink-0">
+      <span class="font-weight-bold text-4xl">
+        Justiciapedía
+      </span>
+    </div>
+    {{!-- Navigation links --}}
+    <div class="block sm:flex">
+      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-6 text-primary text-xl hover:text-gray-900" @route="perfiles"
+        @model={{"instituciones"}} @query={{hash sector="justicia"}}>
         Sector Justicia
       </LinkTo>
-      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-primary hover:text-gray-900" @route="perfiles" @model={{"elecciones"}}>
+      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-6 text-primary text-xl hover:text-gray-900" @route="perfiles"
+        @model={{"elecciones"}}>
         Comisiones de Postulación
       </LinkTo>
-      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-4 text-primary hover:text-gray-900" @route="perfiles" @model="perfiles">
+      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 mr-6 text-primary text-xl hover:text-gray-900" @route="perfiles"
+        @model="perfiles">
         Perfiles
       </LinkTo>
-      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 text-primary hover:text-gray-900" @route="preguntas">
+      <LinkTo class="block mt-4 lg:inline-block lg:mt-0 text-primary text-xl hover:text-gray-900" @route="preguntas">
         Preguntas frecuentes
       </LinkTo>
-      {{!-- @TODO --}}
-      {{!-- <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener">
-        <img src="img/icono-fb-white.png" alt="Facebook" height="35px" width="35px">
-      </a>
-      <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener">
-        <img src="img/icono-tw-white.png" alt="Twitter" height="35px" width="35px">
-      </a> --}}
     </div>
   </div>
 </nav>
 
-{{!-- Outlet --}}
-<main class="bg-mygray">
+<main>
   {{outlet}}
 </main>
-
-{{!-- Footer --}}
-<div id="footer">
-  <div class="container mx-auto first">
-    {{!-- General info --}}
-    <div class="flex flex-wrap">
-      {{!-- ¿Te gusta lo que hacemos? --}}
-      <div class="w-full sm:w-1/2 pr-4 pl-4 md:w-1/3 pr-4 pl-4">
-        <h6>¿Te gusta lo que hacemos?</h6>
-        <ul class="list-unstyled">
-          <li>
-            <a href="http://donacion.redciudadana.org/" target="_blank" rel="noopener">
-              <i class="fa fa-heart"></i>Donaciones
-            </a>
-          </li>
-          <li>
-            <a href="http://voluntarios.redciudadana.org/" target="_blank" rel="noopener">
-              <i class="fa fa-users"></i>Voluntariado
-            </a>
-          </li>
-        </ul>
-      </div>
-      {{!-- Contáctanos --}}
-      <div class="w-full sm:w-1/2 pr-4 pl-4 md:w-1/3 pr-4 pl-4 ">
-        <h6>Contáctanos:</h6>
-        <ul class="list-unstyled">
-          <li>
-            <a href="mailto:info@redciudadana.org.gt" target="_blank" rel="noopener">
-              <i class="fa fa-envelope"></i>info@redciudadana.org
-            </a>
-          </li>
-          <li>
-            <i class="fa fa-map-marker"></i>Guatemala, Guatemala
-          </li>
-        </ul>
-      </div>
-      {{!-- Social follow --}}
-      <div class="w-full follow md:w-1/3 pr-4 pl-4">
-        <h6>Síguenos en:</h6>
-        <div class="flex">
-          <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-fb-white.png" alt="Facebook">
-          </a>
-          <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-tw-white.png" alt="Twitter">
-          </a>
-          <a href="https://www.instagram.com/redxguate/" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-in-white.png" alt="Instragram">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="red-footer">
-  <div class="container mx-auto">
-    <div class="flex flex-wrap">
-      {{!-- Red Ciudadana --}}
-      <div class="w-full md:w-2/3 pr-4 pl-4 flex">
-        <a href="http://redciudadana.org/" target="_blank" rel="noopener">
-          <img src="mi-guatemala/img/logo-rc-color.png" alt="Logo de Red Ciudanana" class="logo-rc m-auto md:mt-3">
-        </a>
-        <p class="my-auto">Desarrollado por Asociación Civil Red Ciudadana</p>
-      </div>
-      <div class="w-full md:w-1/3 pr-4 pl-4 flex my-4 cc-icons text-left text-md-right">
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/gt/" target="_blank" rel="noopener"
-          class="ml-0 md:ml-auto">
-          <img src="mi-guatemala/img/icon-cc-cc.png" alt="Creative Commons">
-          <img src="mi-guatemala/img/icon-cc-by.png" alt="Creative Commons - Atribución">
-          <img src="mi-guatemala/img/icon-cc-sa.png" alt="Creative Commons - Compartir Igual">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>

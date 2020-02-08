@@ -6,10 +6,11 @@ module.exports = {
     extend: {
       colors: {
         'tapa': '#737372',
-        'spindle': '#B0CEE7',
-        'brandy': '#E0B59C',
-        'mygray': '#E7EAEF',
-        'sidecar': '#F3E1BE'
+        'spindle': '#b0cee7',
+        'brandy': '#e0b59c',
+        'mygray': '#e7eaef',
+        'sidecar': '#f3e1be',
+        'light': '#f1f1f1'
       },
       fontFamily: {
         sans: [
