@@ -2,7 +2,7 @@
   <header class="flex flex-wrap w-full">
     <div
       class="block flex-initial m-auto text-center md:text-left text-2xl lg:text-4xl w-full md:w-6/12 xl:w-6/12 md:p-8 xl:px-0 h-64">
-      <h1 class="text-white">
+      <h1 class="text-white font-bold">
         Conoce las instituciones y a los funcionarios públicos del sector Justicia de Guatemala
       </h1>
       <h1 class="text-primary font-bold">
@@ -15,16 +15,35 @@
   </header>
 </div>
 <div class="bg-white w-full">
-  <article class="w-full lg:w-10/12 mx-auto">
+  <article class="w-full lg:w-10/12 mx-auto py-16">
     <div class="flex">
       <div class="flex-1 w-1/2">
-        <h1 class="text-4xl">¿Qué es JusticiaPedia?</h1>
+        <h1 class="text-4xl mb-6 font-bold">¿Qué es JusticiaPedia?</h1>
+        <p>
+          Es una herramienta interactiva y sencilla que busca acercar a la ciudadanía con el sector justicia, hacer que sea comprensible un tema que nos debe interesar a todos y todas.
+          <br>
+          <br>
+          Los profesionales del derecho (abogados, magistrados, académicos) y sus funciones (en el Poder Judicial, en el Consejo de la Magistratura, en el Poder Ejecutivo, en el Legislativo o en la academia) están reguladas en Códigos de Ética y en Códigos de Procedimientos, aunque con menos precisión que en otros países. Esta regulación busca legitimar a los actores judiciales y garantizar que los conflictos sociales se canalicen por los medios institucionales adecuados y evitar el recurso a la violencia.
+        </p>
       </div>
       <div class="flex-1 w-1/2">
-        <h1>HOla</h1>
+        <iframe class="mx-auto" width="560" height="315" src="https://www.youtube-nocookie.com/embed/cs-sh5ez5Iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </article>
+</div>
+<div class="w-full lg:w-10/12 mx-auto text-center block py-16">
+  <h1 class="text-xl lg:text-3xl font-bold mb-5">
+    Elija la categoría de su interes
+  </h1>
+  <div class="flex justify-center mx-auto">
+    <div class="flex w-3/12">
+      <CardLink class="m-2" @route="index" @text="Sector Justicia" @img="img/icons/icon-justice.png" />
+    </div>
+    <div class="flex w-3/12">
+      <CardLink class="m-2" @route="index" @text="Comisiones de Postulación" @img="img/icons/icon-comissions.png" />
+    </div>
+  </div>
 </div>
 
 {{!-- <div class="w-full bg-blue text-white">

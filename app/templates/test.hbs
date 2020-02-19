@@ -1,6 +1,11 @@
-<Input @type="number" @value={{this.page}}/>
-<Input @type="checkbox" @checked={{this.isMujer}}/>
-
-{{#each this.content as |item|}}
-    <h1>{{item}}</h1>
-{{/each}}
+<div class="flex">
+  <div class="flex-1/6">
+  <CardLink @route="index" @text="Sector Justicia" @img="img/icons/icon-justice.png" />
+    {{!-- <LinkTo class="bg-white w-auto p-12" @route="index">
+      <img class="w-20 inline" src="img/icons/icon-justice.png" alt="Mazo">
+      <span class="font-bold text-2xl">
+        Sector Justicia
+      </span>
+    </LinkTo> --}}
+  </div>
+</div>

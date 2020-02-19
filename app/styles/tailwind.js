@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Lato',
+          'Work Sans',
           ...defaultTheme.fontFamily.sans,
         ]
       },
