@@ -80,6 +80,7 @@ html {
 // HTML
 
 body,
+p,
 a {
   font-family: 'Work Sans', sans-serif;
   color: #737372;
@@ -143,7 +144,7 @@ h6 {
 .ember-power-select-trigger {
   // Dimensions
   width: 80%;
-  height: 40px;
+  height: 4rem;
   // Margin and padding
   margin: auto;
   margin-top: 20px;
@@ -159,6 +160,12 @@ h6 {
   // Color
   background-color: $light;
   color: gray;
+
+  .ember-power-select-placeholder {
+    margin-top: 0.75rem;
+    font-weight: bold;
+    color: $dark;
+  }
 
   .ember-power-select-status-icon {
     margin-right: 20px;
@@ -195,7 +202,7 @@ h6 {
     text-align: center;
 
     div {
-      display: flex;
+      dis104y: flex;
     }
   }
 
@@ -609,10 +616,6 @@ table.table.borderless {
   }
 }
 
-.panel .header img {
-  filter: brightness(0) invert(1) !important;
-}
-
 .popover {
   .arrow {
     opacity: 0;
@@ -686,4 +689,20 @@ table.table.borderless {
       }
     }
   }
+}
+
+// Patterns
+
+.blue-pattern {
+  background-image: url(/img/blue-pattern.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.dark-pattern {
+  background-image: url(/img/dark-pattern.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }

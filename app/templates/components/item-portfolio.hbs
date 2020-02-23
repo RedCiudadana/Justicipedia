@@ -25,14 +25,9 @@
     </div>
     <div class="card-body text-center pt-lg-4 px-lg-4 pb-lg-2">
       <h6 class="card-title">{{@profile.name}}{{@profile.nombre}}</h6>
-      {{#if (not fit)}}
-        <p class="card-text">
-          {{@profile.descripcion}}
-        </p>
-      {{/if}}
     </div>
     <div class="card-footer bg-white text-center border-0 p-0 pb-3 m-t--5">
-      <LinkTo @route="perfil" @models={{array this.modelName @profile.id}} class="btn btn-secondary">
+      <LinkTo @route="perfil" @models={{array this.modelName @profile.id}} class="btn btn-secondary text-white">
         Más información
       </LinkTo>
     </div>
