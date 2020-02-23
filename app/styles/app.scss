@@ -11,11 +11,15 @@ $dark: #202d3e;
 $light: #f1f1f1;
 
 // $navbar-color: #3a3a3a;
-$navbar-color: #ffffff;
+$navbar-color: #737372;
 
 // $footer-background-color: #4c4c4c;
 $footer-background-color: $primary;
 $footer-color: #ffffff;
+
+$body-color: #737372;
+
+$dark: $body-color;
 
 $border-width: 2px;
 $border-radius: 5px;
@@ -39,24 +43,46 @@ $border-radius: 5px;
  * Panel
  */
 
-@font-face {
-  font-family: 'Zona Pro';
-  src: url(/fonts/ZonaPro-Bold.otf) format('opentype');
-  font-weight: bold;
+html {
+  font-size: 1rem;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url(/fonts/Lato-Regular.ttf) format('truetype');
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Black.otf) format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Bold.otf) format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Medium.otf) format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Regular.otf) format('opentype');
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-SemiBold.otf) format('opentype');
+  font-weight: 600;
 }
 
 // HTML
 
 body,
 a {
-  font-family: 'Lato';
-  color: #4d5760;
+  font-family: 'Work Sans';
+  color: #737372;
 }
 
 h1,
@@ -75,7 +101,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Zona Pro';
+  font-family: 'Work Sans';
 }
 
 // Pagination
@@ -535,9 +561,10 @@ table.table.borderless {
     }
 
     a {
+      text-align: center;
       padding: 5px 15px;
       border-radius: 160px;
-      font-weight: 200;
+      font-weight: 600;
       line-height: 0.85rem !important;
     }
 
