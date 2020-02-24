@@ -27,12 +27,13 @@
     &.active, &:hover {
       @extend .rounded;
       border-width: 0 !important;
+      background-color: $info !important;
       font-weight: 400;
-      background-color: $warning !important;
       color: white !important;
-      .img-white {
-        filter: brightness(0) invert(1);
-      }
+    }
+
+    &:hover {
+      background-color: $secondary !important;
     }
   }
 

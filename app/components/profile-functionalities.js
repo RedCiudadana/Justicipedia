@@ -13,18 +13,18 @@ export default Component.extend({
       this.links.pushObjects([
         {
           route: "perfil.index",
-          img: "img/i-estrado.png",
-          text: "Información general"
+          img: "img/icons/institution.png",
+          text: "Institución"
         },
         {
           route: "perfil.autoridades",
-          img: "img/i-personas.png",
+          img: "img/icons/authorities.png",
           text: "Autoridades",
           disabled: profiles.length < 1
         },
         {
           route: "perfil.elecciones",
-          img: "img/i-personas.png",
+          img: "img/icons/comissions.png",
           text: "Comisiones de Postulación",
           disabled: elections.length < 1
         }
@@ -35,7 +35,7 @@ export default Component.extend({
       this.links.pushObjects([
         {
           route: "perfil.index",
-          img: "img/i-estrado.png",
+          img: "img/icons/institution.png",
           text: "Información general"
         }
       ]);
@@ -94,18 +94,18 @@ export default Component.extend({
       this.links.pushObjects([
         {
           route: "perfil.index",
-          img: "img/i-estrado.png",
+          img: "img/icons/institution.png",
           text: "Información general"
         },
         {
           route: "perfil.candidatos",
-          img: "img/i-personas.png",
+          img: "img/icons/authorities.png",
           text: "Candidatos",
           disabled: candidates.length < 1
         },
         {
           route: "perfil.comisionados",
-          img: "img/i-personas.png",
+          img: "img/icons/comissions.png",
           text: "Comisionados",
           disabled: comissioners.length < 1
         }
