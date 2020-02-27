@@ -22,7 +22,7 @@
 </div>
 {{!-- 'Navbar' para perfiles --}}
 <div class="row my-2">
-  <div class="col-12 p-0 border shadow-sm bg-white rounded">
+  <div class="col-12 p-0 border shadow-sm rounded">
     <BsNav
       @type="pills"
       @justified={{false}}
@@ -33,7 +33,7 @@
         <nav.item>
           <nav.link-to @route={{link.route}} @disabled={{link.disabled}} class="p-0">
             {{#if link.img}}
-              <img src={{link.img}} alt={{link.text}} height="25px" class="img-white">
+              <img src={{link.img}} alt={{link.text}} height="35px">
             {{/if}}
             {{link.text}}
           </nav.link-to>

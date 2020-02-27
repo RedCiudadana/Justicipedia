@@ -1,20 +1,25 @@
 // Justiciapedia
 
-$primary: #475660;
-$secondary: #6e6299;
+$primary: #737372;
+$secondary: #e0b59c;
+$info: #b0cee7;
 
 $success: #0cab55;
 $warning: #fab026;
 
 $dark: #202d3e;
-$light: #f2f2f2;
+$light: #f1f1f1;
 
 // $navbar-color: #3a3a3a;
-$navbar-color: #ffffff;
+$navbar-color: #737372;
 
 // $footer-background-color: #4c4c4c;
 $footer-background-color: $primary;
 $footer-color: #ffffff;
+
+$body-color: #737372;
+
+$dark: $body-color;
 
 $border-width: 2px;
 $border-radius: 5px;
@@ -38,24 +43,47 @@ $border-radius: 5px;
  * Panel
  */
 
-@font-face {
-  font-family: 'Zona Pro';
-  src: url(/fonts/ZonaPro-Bold.otf) format('opentype');
-  font-weight: bold;
+html {
+  font-size: 1rem;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url(/fonts/Lato-Regular.ttf) format('truetype');
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Black.otf) format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Bold.otf) format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Medium.otf) format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-Regular.otf) format('opentype');
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url(/fonts/WorkSans-SemiBold.otf) format('opentype');
+  font-weight: 600;
 }
 
 // HTML
 
 body,
+p,
 a {
-  font-family: 'Lato';
-  color: #4d5760;
+  font-family: 'Work Sans', sans-serif;
+  color: #737372;
 }
 
 h1,
@@ -74,7 +102,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Zona Pro';
+  font-family: 'Work Sans', sans-serif;
 }
 
 // Pagination
@@ -116,7 +144,7 @@ h6 {
 .ember-power-select-trigger {
   // Dimensions
   width: 80%;
-  height: 40px;
+  height: 4rem;
   // Margin and padding
   margin: auto;
   margin-top: 20px;
@@ -132,6 +160,12 @@ h6 {
   // Color
   background-color: $light;
   color: gray;
+
+  .ember-power-select-placeholder {
+    margin-top: 0.75rem;
+    font-weight: bold;
+    color: $dark;
+  }
 
   .ember-power-select-status-icon {
     margin-right: 20px;
@@ -168,7 +202,7 @@ h6 {
     text-align: center;
 
     div {
-      display: flex;
+      dis104y: flex;
     }
   }
 
@@ -534,9 +568,10 @@ table.table.borderless {
     }
 
     a {
+      text-align: center;
       padding: 5px 15px;
       border-radius: 160px;
-      font-weight: 200;
+      font-weight: 600;
       line-height: 0.85rem !important;
     }
 
@@ -579,10 +614,6 @@ table.table.borderless {
   .w-md-fit {
     width: fit-content !important;
   }
-}
-
-.panel .header img {
-  filter: brightness(0) invert(1) !important;
 }
 
 .popover {
@@ -658,4 +689,31 @@ table.table.borderless {
       }
     }
   }
+}
+
+// Patterns
+
+.blue-pattern {
+  background-image: url(/img/blue-pattern.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.dark-pattern {
+  background-image: url(/img/dark-pattern.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+// Hover collapse
+.el {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.trigger:hover > .el {
+  max-height: var(--max-height);
 }

@@ -1,52 +1,68 @@
-<div class="w-100 bg-primary text-white">
-  <div class="container-fluid py-5">
-    <div class="row py-5" id="index-banner">
-      <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left">
-        <h3>
+<div class="w-100 bg-info text-white">
+  {{!-- Slider --}}
+  <div class="container-fluid">
+    <div class="row" id="index-banner">
+      <div class="col-12 text-left offset-lg-1 col-lg-5 py-5 px-3 h-100 align-self-center">
+        <h2>
           Conoce a las instituciones y a los<br>
           funcionarios públicos del sector de<br>
           Justicia de Guatemala
-        </h3>
+        </h2>
+        <h1 class="text-dark">
+          #Justiciapedía
+        </h1>
       </div>
-      <div class="col-12 col-lg-5">
-        <img src="/img/slider.png" alt="Corte Suprema de Justicia" class="img-responsive w-100 pt-5 m-lg-0">
+      <div class="col-12 col-lg-5 offset-lg-1 p-0">
+        <img src="/img/slider.png" alt="Corte Suprema de Justicia" class="img-responsive w-100">
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid bg-light py-5">
-  <div class="row py-5">
-    <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left">
-      <h2 class="mb-4">¿Qué es Justiciapedia?</h2>
+<div class="container-fluid bg-white py-md-5">
+  <div class="row py-5 align-items-center">
+    <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left h-100">
+      <h2 class="mb-4">
+        ¿Qué es Justiciapedia?
+      </h2>
       <p>
-        Es una herramienta interactiva y sencilla que busca acercar a la ciudadanía con el sector justicia, hacer que sea comprensible un tema que nos debe interesar a todos y todas.
+        Es una herramienta interactiva y sencilla que busca acercar a la ciudadanía con el sector justicia, hacer que
+        sea comprensible un tema que nos debe interesar a todos y todas.
+        <br>
+        <br>
+        Los profesionales del derecho (abogados, magistrados, académicos) y sus funciones (en el Poder Judicial, en el
+        Consejo de la Magistratura, en el Poder Ejecutivo, en el Legislativo o en la academia) están reguladas en
+        Códigos de Ética y en Códigos de Procedimientos, aunque con menos precisión que en otros países. Esta regulación
+        busca legitimar a los actores judiciales y garantizar que los conflictos sociales se canalicen por los medios
+        institucionales adecuados y evitar el recurso a la violencia.
       </p>
     </div>
     <div class="col-12 col-lg-5 text-center">
       <div class="video-container">
-        <iframe class="mt-5 mt-md-0" width="560" height="315" src="https://www.youtube.com/embed/cs-sh5ez5Iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="mt-5 mt-md-0" width="560" height="315" src="https://www.youtube.com/embed/cs-sh5ez5Iw"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </div>
-<div class="container-fluid py-5">
+<div class="container-fluid py-md-5 bg-light">
   <div class="row py-5 text-center">
     <div class="col-12">
       <h2 class="mb-4 pb-4">Elija la categoría de tu interes</h2>
     </div>
-    <div class="col-12 offset-lg-1 col-lg-5 border-right">
-      <h2 class="my-5 py-0 py-md-5">
+    <div class="col-12 offset-lg-1 col-lg-5">
+      <h2 class="my-2 p-4 bg-white">
         <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
-          <img src="/img/i-justicia.png" alt="Mazo" class="mr-lg-3">
+          <img src="/img/icons/justice.png" alt="Mazo" class="mr-lg-3">
           <br class="d-block d-md-none">
           Sector Justicia
         </LinkTo>
       </h2>
     </div>
     <div class="col-12 col-lg-5">
-      <h2 class="my-5 py-0 py-md-5">
+      <h2 class="my-2 p-4 bg-white">
         <LinkTo @route="perfiles" @model={{"elecciones"}}>
-          <img src="/img/i-personas-d.png" alt="Edificio" class="mr-lg-3">
+          <img src="/img/icons/comissions.png" alt="Edificio" class="mr-lg-3">
           <br class="d-block d-md-none">
           Comisiones de Postulación
         </LinkTo>

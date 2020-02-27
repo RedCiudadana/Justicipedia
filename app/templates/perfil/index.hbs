@@ -60,7 +60,7 @@
       {{#if model.profile.web}}
         <div>
           <a href="//{{model.profile.web}}" target="_blank" rel="noopener">
-            <img src="img/icono-web.png" alt="Página web">
+            <img src="img/icons/dark-sm-location.png" alt="Página web">
             {{model.profile.web}}
           </a>
         </div>
@@ -69,7 +69,7 @@
       {{#if model.profile.correo}}
         <div>
           <a href="//{{model.profile.correo}}" target="_blank" rel="noopener">
-            <img src="img/icono-correo.png" alt="Correo electrónico">
+            <img src="img/icons/dark-sm-envelope.png" alt="Correo electrónico">
             {{model.profile.correo}}
           </a>
         </div>
@@ -78,7 +78,7 @@
       {{#if model.profile.tw}}
         <div>
           <a href="https://twitter.com/{{twitter-link model.profile.tw}}" target="_blank" rel="noopener">
-            <img src="img/icono-tw.png" alt="Twitter">
+            <img src="img/icons/dark-sm-twitter.png" alt="Twitter">
             @{{twitter-link model.profile.tw}}
           </a>
         </div>
@@ -87,7 +87,7 @@
       {{#if model.profile.fb}}
         <div>
           <a href="//{{model.profile.fb}}" target="_blank" rel="noopener">
-            <img src="img/icono-fb.png" alt="Facebook">
+            <img src="img/icons/dark-sm-facebook.png" alt="Facebook">
             {{model.profile.nombre}}
           </a>
         </div>
@@ -103,7 +103,7 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/i-estrado.png" alt="Descripción" class="img-white">
+          <img src="img/icons/circle-institution.png" alt="Descripción" class="img-white">
           <h3>Descripción de la institutición</h3>
         </div>
         <div>
@@ -124,7 +124,7 @@
       <div class="panel">
         <div class="header d-flex bg-primary">
           {{!-- @TODO Cambiar icono --}}
-          <img src="img/icono-mision.png" alt="Mision" >
+          <img src="img/icons/circle-mission.png" alt="Mision" >
           <h3>
             Misión
           </h3>
@@ -151,7 +151,7 @@
       <div class="panel">
         <div class="header d-flex bg-primary">
           {{!-- @TODO Cambiar icono --}}
-          <img src="img/icono-vision.png" alt="Visión" >
+          <img src="img/icons/circle-vision.png" alt="Visión" >
           <h3>
             Visión
           </h3>
@@ -177,7 +177,7 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/i-personas.png" alt="Icono años">
+          <img src="img/icons/circle-authorities.png" alt="Icono autoridades">
           <h3>Autoridades</h3>
         </div>
         <div>
@@ -215,7 +215,7 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/i-bolsa.png" alt="Icono bolsa de dinero">
+          <img src="img/icons/circle-budget.png" alt="Icono bolsa de dinero">
           <h3>Presupuesto</h3>
         </div>
         <div>
@@ -235,42 +235,42 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-enlaces.png" alt="Icono bolsa de dinero">
+          <img src="img/icons/circle-links.png" alt="Icono bolsa de dinero">
           <h3>Enlaces</h3>
         </div>
         <div>
           <div class="body p-5">
             <div class="blocks-links d-block d-md-flex">
-              <a href={{profile.enlaceAccesoInformacion}} class="bg-secondary p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
+              <a href={{profile.enlaceAccesoInformacion}} class="bg-info p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
                 <div>
-                  <img src="img/icono-acceso-informacion.png" alt="Icono bolsa de dinero">
+                  <img src="img/icons/magnifier.png" alt="Lupa">
                 </div>
                 <div>
-                  <p>Acceso a la información</p>
-                </div>
-              </a>
-              <a href={{profile.enlaceGobiernoDigital}} class="bg-secondary p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
-                <div>
-                  <img src="img/icono-gobierno-digital.png" alt="Icono bolsa de dinero">
-                </div>
-                <div>
-                  <p>Gobierno Digital</p>
+                  <p class="text-white font-weight-bold">Acceso a la información</p>
                 </div>
               </a>
-              <a href={{profile.enlaceDatosAbiertos}} class="bg-secondary p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
+              <a href={{profile.enlaceGobiernoDigital}} class="bg-info p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
                 <div>
-                  <img src="img/icono-datos-abiertos.png" alt="Icono bolsa de dinero">
+                  <img src="img/icons/digital.png" alt="Puntero de computadora">
                 </div>
                 <div>
-                  <p>Datos Abiertos</p>
+                  <p class="text-white font-weight-bold">Gobierno Digital</p>
                 </div>
               </a>
-              <a href={{profile.enlaceServicios}} class="bg-secondary p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
+              <a href={{profile.enlaceDatosAbiertos}} class="bg-info p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
                 <div>
-                  <img src="img/icono-servicio.png" alt="Icono bolsa de dinero">
+                  <img src="img/icons/unlock.png" alt="Candado abierto">
                 </div>
                 <div>
-                  <p>Servicio</p>
+                  <p class="text-white font-weight-bold">Datos Abiertos</p>
+                </div>
+              </a>
+              <a href={{profile.enlaceServicios}} class="bg-info p-2 px-3 w-100 w-md-25 mx-auto my-2 m-md-2 line-height-thin">
+                <div>
+                  <img src="img/icons/document.png" alt="Documentos">
+                </div>
+                <div>
+                  <p class="text-white font-weight-bold">Servicio</p>
                 </div>
               </a>
             </div>
@@ -288,7 +288,7 @@
     <div class="col-md-6">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-historial.png" alt="Experiencia Profesional">
+          <img src="img/icons/circle-folder.png" alt="Experiencia Profesional">
           <h3>
             Experiencia Profesional
           </h3>
@@ -312,7 +312,7 @@
     <div class="col-md-6">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-experiencia-academica.png" alt="Experiencia Académica">
+          <img src="img/icons/circle-academic.png" alt="Experiencia Académica">
           <h3>
             Experiencia Académica
           </h3>
@@ -338,7 +338,7 @@
     <div class="col-6">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-fuentes.png" alt="Mensaje de globo con una I">
+          <img src="img/icons/circle-info.png" alt="Mensaje de globo con una I">
           <h3>
             Fuentes de información
           </h3>
@@ -377,7 +377,7 @@
     <div class="col-md-6">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/i-personas.png" alt="Proyección Humana">
+          <img src="img/icons/circle-authorities.png" alt="Proyección Humana">
           <h3>
             Proyección Humana
           </h3>
@@ -405,7 +405,7 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-requisitos.png" alt="Documentos">
+          <img src="img/icons/circle-document.png" alt="Documentos">
           <h3>
             Requisitos
           </h3>
@@ -430,7 +430,7 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/i-personas.png" alt="Grupo de personas">
+          <img src="img/icons/circle-comissions.png" alt="Grupo de personas">
           <h3>
             Comisión de Postulación
           </h3>
@@ -455,15 +455,15 @@
     <div class="col-12">
       <div class="panel">
         <div class="header d-flex bg-primary">
-          <img src="img/icono-infografia.png" alt="Icono de graficas">
+          <img src="img/icons/circle-graphics.png" alt="Icono de graficas">
           <h3>
             Infografia
           </h3>
         </div>
         <div>
-          <div class="body p-4">
+          <div class="body p-4 text-center">
             {{#if model.profile.infografiaURL}}
-              <img src={{model.profile.infografiaURL}} alt="Infografia URL">
+              <img src={{model.profile.infografiaURL}} alt="Infografia URL" class="img-responsive">
             {{else}}
               <p class="px-5 pt-3">
                 No hay información
@@ -483,9 +483,9 @@
           </h3>
         </div>
         <div>
-          <div class="body p-4">
+          <div class="body p-4 text-center">
             {{#if model.profile.cronogramaURL}}
-              <img src={{model.profile.cronogramaURL}} alt="Cronograma">
+              <img src={{model.profile.cronogramaURL}} alt="Cronograma" class="img-responsive">
             {{else}}
               <p class="px-5 pt-3">
                 No hay información
