@@ -706,3 +706,14 @@ table.table.borderless {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
+
+// Hover collapse
+.el {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.trigger:hover > .el {
+  max-height: var(--max-height);
+}
