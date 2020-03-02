@@ -1,7 +1,7 @@
 {{!-- Portofolio --}}
-<div class="row">
+<div class="row py-4">
   <div class="col-{{colSize}} offset-{{offset}}">
-    <div id="portfolio" class="portfolio clearfix my-4 row row-eq-height">
+    <div id="portfolio" class="portfolio clearfix row row-eq-height">
       {{#each @profiles as |profile|}}
         <ItemPortfolio @profile={{profile}} @fit={{@fit}}/>
       {{/each}}

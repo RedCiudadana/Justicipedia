@@ -20,7 +20,7 @@
 </div>
 <div class="container-fluid bg-white py-md-5">
   <div class="row py-5 align-items-center">
-    <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left h-100">
+    <div class="col-12 text-center offset-lg-1 col-lg-5 text-lg-left h-100 mr-5">
       <h2 class="mb-4">
         ¿Qué es Justiciapedia?
       </h2>
@@ -46,25 +46,35 @@
   </div>
 </div>
 <div class="container-fluid py-md-5 bg-light">
-  <div class="row py-5 text-center">
+  <div class="row py-5 text-center justify-content-center">
     <div class="col-12">
       <h2 class="mb-4 pb-4">Elija la categoría de tu interes</h2>
     </div>
-    <div class="col-12 offset-lg-1 col-lg-5">
+    <div class="col-12 col-md-5 col-lg-4">
       <h2 class="my-2 p-4 bg-white">
         <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
-          <img src="/img/icons/justice.png" alt="Mazo" class="mr-lg-3">
-          <br class="d-block d-md-none">
-          Sector Justicia
+          <div class="row h-100">
+            <div class="col-12 col-md-6">
+              <img src="/img/icons/justice.png" alt="Mazo">
+            </div>
+            <div class="col-12 col-md-6 m-auto text-center">
+              Sector Justicia
+            </div>
+          </div>
         </LinkTo>
       </h2>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-md-5 col-lg-4">
       <h2 class="my-2 p-4 bg-white">
         <LinkTo @route="perfiles" @model={{"elecciones"}}>
-          <img src="/img/icons/comissions.png" alt="Edificio" class="mr-lg-3">
-          <br class="d-block d-md-none">
-          Comisiones de Postulación
+          <div class="row h-100">
+            <div class="col-12 col-md-6">
+              <img src="/img/icons/comissions.png" alt="Edificio">
+            </div>
+            <div class="col-12 col-md-6 m-auto text-center">
+              Comisiones de Postulación
+            </div>
+          </div>
         </LinkTo>
       </h2>
     </div>

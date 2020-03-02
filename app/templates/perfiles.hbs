@@ -1,12 +1,16 @@
 <div class="container-fluid {{if (eq model.firstObject._internalModel.modelName "profile") "blue-pattern" "dark-pattern"}} ">
   <div class="row justify-content-center text-center">
     <div class="col-md-12 pt-5">
-      {{#if (not-eq model.firstObject._internalModel.modelName "profile")}}
+      {{#if (eq model.firstObject._internalModel.modelName "profile")}}
+        <h1 class="text-white">
+          Buscar perfiles
+        </h1>
         <img src="img/icons/search.png" alt="Lupa">
+      {{else}}
+        <h1 class="text-white">
+          Buscar instituciones
+        </h1>
       {{/if}}
-      <h1 class="text-white">
-        Buscar perfiles
-      </h1>
     </div>
     <div class="col-12 col-md-8 col-lg-6 pb-5">
       <PowerSelect
@@ -46,6 +50,31 @@
   </div>
 </div>
 
+<div class="w-100 bg-light pt-4">
+  <div class="container">
+    <div class="row-text-center">
+      {{#if (eq model.firstObject._internalModel.modelName "institution")}}
+        {{!-- Organigrama --}}
+        <div class="row">
+          <div class="col-12">
+            <div class="panel">
+              <div class="header d-flex bg-primary">
+                <img src="img/icons/circle-orgchart.png" alt="Organigrama">
+                <h3>Sector Justicia</h3>
+              </div>
+              <div>
+                <div class="body p-4">
+                  <Orgchart class="w-100 bg-red" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
 <Portfolio
   @bg="light"
   @profiles={{this.profiles}}
@@ -80,23 +109,5 @@
         </nav>
       </div>
     </div>
-    {{#if (eq model.firstObject._internalModel.modelName "institution")}}
-      {{!-- Organigrama --}}
-      <div class="row">
-        <div class="col-12">
-          <div class="panel">
-            <div class="header d-flex bg-primary">
-              <img src="img/icons/orgchart.png" alt="Iconos de personas">
-              <h3>Sector Justicia</h3>
-            </div>
-            <div>
-              <div class="body p-4">
-                <Orgchart class="w-100 bg-red" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    {{/if}}
   </div>
 </div>
