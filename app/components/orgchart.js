@@ -67,7 +67,7 @@ export default Component.extend({
             }
           },
           layout: {
-            type: 'dendrogram',
+            type: isSM ? 'dendrogram' : 'compactBox',
             direction: !isSM ? 'LR' : 'TB',
             getId: function getId(d) {
               return d.id;
@@ -79,10 +79,10 @@ export default Component.extend({
               return 16;
             },
             getVGap: function getVGap() {
-              return 10;
+              return 20;
             },
             getHGap: function getHGap() {
-              return 100;
+              return 180;
             }
           }
         });
@@ -95,7 +95,7 @@ export default Component.extend({
               position: !isSM ? node.children ? 'top' : 'rigth' : node.children ? 'rigth' : 'bottom',
               style: {
                 fontSize: 20,
-                rotate: !isSM ? 0 : node.children ? 0 : 90,
+                rotate: !isSM ? 0 : node.children ? 0 : 60,
                 textAlign: 'start'
               }
             }
