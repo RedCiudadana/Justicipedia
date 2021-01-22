@@ -2,138 +2,142 @@
 
 {{title "Justiciapedia - RedCiudadana"}}
 
-{{!-- Navbar --}}
-<BsNavbar id="navbar" @backgroundColor="primary" @type="dark" @position="sticky-top" @fluid={{true}} as |navbar|>
-  <div class="navbar-header">
-    {{navbar.toggle}}
-
-    <LinkTo @route="application" class="navbar-brand">
-      <img src="logo-brand.png" class="img-responsive" title={{nombreApp}} alt="Congreso">
-    </LinkTo>
-  </div>
-
-  <navbar.content>
-    {{!-- @TODO Hacer funcionar active en nav.item --}}
-    <navbar.nav @justified={{false}} type="pills" class="ml-auto" as |nav|>
-      {{#each model.navbarLinks as |link|}}
+{{#if (not this.embed)}}
+  {{!-- Navbar --}}
+  <BsNavbar id="navbar" @backgroundColor="primary" @type="dark" @position="sticky-top" @fluid={{true}} as |navbar|>
+    <div class="navbar-header">
+      {{navbar.toggle}}
+  
+      <LinkTo @route="application" class="navbar-brand">
+        <img src="logo-brand.png" class="img-responsive" title={{nombreApp}} alt="Congreso">
+      </LinkTo>
+    </div>
+  
+    <navbar.content>
+      {{!-- @TODO Hacer funcionar active en nav.item --}}
+      <navbar.nav @justified={{false}} type="pills" class="ml-auto" as |nav|>
+        {{#each model.navbarLinks as |link|}}
         <nav.item @active={{false}}>
           <LinkTo @route={{link.route}}>{{link.title}}</LinkTo>
         </nav.item>
-      {{/each}}
-
-      <nav.item @active={{false}} class="mt-1">
-        <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia"}}>
-          Sector Justicia
-        </LinkTo>
-      </nav.item>
-
-      <nav.item @active={{false}} class="mt-1">
-        <LinkTo @route="perfiles" @model={{"elecciones"}}>
-          Comisiones de Postulación
-        </LinkTo>
-      </nav.item>
-
-      <nav.item @active={{false}} class="mt-1">
-        <LinkTo @route="perfiles" @model="perfiles">
-          Perfiles
-        </LinkTo>
-      </nav.item>
-
-      <nav.item @active={{false}} class="mt-1">
-        <LinkTo @route="preguntas">
-          Preguntas frecuentes
-        </LinkTo>
-      </nav.item>
-
-      <nav.item class="no-hover">
-        <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener">
-          <img src="img/icono-fb-white.png" alt="Facebook" height="35px" width="35px">
-        </a>
-        <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener">
-          <img src="img/icono-tw-white.png" alt="Twitter" height="35px" width="35px">
-        </a>
-      </nav.item>
-
-    </navbar.nav>
-  </navbar.content>
-</BsNavbar>
+        {{/each}}
+  
+        <nav.item @active={{false}} class="mt-1">
+          <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }}>
+            Sector Justicia
+          </LinkTo>
+        </nav.item>
+  
+        <nav.item @active={{false}} class="mt-1">
+          <LinkTo @route="perfiles" @model={{"elecciones"}}>
+            Comisiones de Postulación
+          </LinkTo>
+        </nav.item>
+  
+        <nav.item @active={{false}} class="mt-1">
+          <LinkTo @route="perfiles" @model="perfiles">
+            Perfiles
+          </LinkTo>
+        </nav.item>
+  
+        <nav.item @active={{false}} class="mt-1">
+          <LinkTo @route="preguntas">
+            Preguntas frecuentes
+          </LinkTo>
+        </nav.item>
+  
+        <nav.item class="no-hover">
+          <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener">
+            <img src="img/icono-fb-white.png" alt="Facebook" height="35px" width="35px">
+          </a>
+          <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener">
+            <img src="img/icono-tw-white.png" alt="Twitter" height="35px" width="35px">
+          </a>
+        </nav.item>
+  
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+{{/if}}
 
 {{!-- Outlet --}}
 <main>
   {{outlet}}
 </main>
 
-{{!-- Footer --}}
-<div id="footer">
-  <div class="container first">
-    {{!-- General info --}}
-    <div class="row">
-      {{!-- ¿Te gusta lo que hacemos? --}}
-      <div class="col-12 col-sm-6 col-md-4">
-        <h6>¿Te gusta lo que hacemos?</h6>
-        <ul class="list-unstyled">
-          <li>
-            <a href="http://donacion.redciudadana.org/" target="_blank" rel="noopener">
-              <i class="fa fa-heart"></i>Donaciones
+{{#if (not this.embed)}}
+  {{!-- Footer --}}
+  <div id="footer">
+    <div class="container first">
+      {{!-- General info --}}
+      <div class="row">
+        {{!-- ¿Te gusta lo que hacemos? --}}
+        <div class="col-12 col-sm-6 col-md-4">
+          <h6>¿Te gusta lo que hacemos?</h6>
+          <ul class="list-unstyled">
+            <li>
+              <a href="http://donacion.redciudadana.org/" target="_blank" rel="noopener">
+                <i class="fa fa-heart"></i>Donaciones
+              </a>
+            </li>
+            <li>
+              <a href="http://voluntarios.redciudadana.org/" target="_blank" rel="noopener">
+                <i class="fa fa-users"></i>Voluntariado
+              </a>
+            </li>
+          </ul>
+        </div>
+        {{!-- Contáctanos --}}
+        <div class="col-12 col-sm-6 col-md-4 order-md-3">
+          <h6>Contáctanos:</h6>
+          <ul class="list-unstyled">
+            <li>
+              <a href="mailto:info@redciudadana.org.gt" target="_blank" rel="noopener">
+                <i class="fa fa-envelope"></i>info@redciudadana.org
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i>Guatemala, Guatemala
+            </li>
+          </ul>
+        </div>
+        {{!-- Social follow --}}
+        <div class="col-12 follow col-md-4">
+          <h6>Síguenos en:</h6>
+          <div class="d-flex">
+            <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener" class="image-opacity">
+              <img src="mi-guatemala/img/icon-fb-white.png" alt="Facebook">
             </a>
-          </li>
-          <li>
-            <a href="http://voluntarios.redciudadana.org/" target="_blank" rel="noopener">
-              <i class="fa fa-users"></i>Voluntariado
+            <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener" class="image-opacity">
+              <img src="mi-guatemala/img/icon-tw-white.png" alt="Twitter">
             </a>
-          </li>
-        </ul>
+            <a href="https://www.instagram.com/redxguate/" target="_blank" rel="noopener" class="image-opacity">
+              <img src="mi-guatemala/img/icon-in-white.png" alt="Instragram">
+            </a>
+          </div>
+        </div>
       </div>
-      {{!-- Contáctanos --}}
-      <div class="col-12 col-sm-6 col-md-4 order-md-3">
-        <h6>Contáctanos:</h6>
-        <ul class="list-unstyled">
-          <li>
-            <a href="mailto:info@redciudadana.org.gt" target="_blank" rel="noopener">
-              <i class="fa fa-envelope"></i>info@redciudadana.org
-            </a>
-          </li>
-          <li>
-            <i class="fa fa-map-marker"></i>Guatemala, Guatemala
-          </li>
-        </ul>
-      </div>
-      {{!-- Social follow --}}
-      <div class="col-12 follow col-md-4">
-        <h6>Síguenos en:</h6>
-        <div class="d-flex">
-          <a href="https://www.facebook.com/Redciudadanagt/" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-fb-white.png" alt="Facebook">
+    </div>
+  </div>
+  <div id="red-footer">
+    <div class="container">
+      <div class="row">
+        {{!-- Red Ciudadana --}}
+        <div class="col-12 col-md-8 d-flex">
+          <a href="http://redciudadana.org/" target="_blank" rel="noopener">
+            <img src="mi-guatemala/img/logo-rc-color.png" alt="Logo de Red Ciudanana" class="logo-rc m-auto mt-md-3">
           </a>
-          <a href="https://twitter.com/RedxGuate" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-tw-white.png" alt="Twitter">
-          </a>
-          <a href="https://www.instagram.com/redxguate/" target="_blank" rel="noopener" class="image-opacity">
-            <img src="mi-guatemala/img/icon-in-white.png" alt="Instragram">
+          <p class="my-auto">Desarrollado por Asociación Civil Red Ciudadana</p>
+        </div>
+        <div class="col-12 col-md-4 d-flex my-4 cc-icons text-left text-md-right">
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/gt/" target="_blank" rel="noopener"
+            class="ml-0 ml-md-auto">
+            <img src="mi-guatemala/img/icon-cc-cc.png" alt="Creative Commons">
+            <img src="mi-guatemala/img/icon-cc-by.png" alt="Creative Commons - Atribución">
+            <img src="mi-guatemala/img/icon-cc-sa.png" alt="Creative Commons - Compartir Igual">
           </a>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div id="red-footer">
-  <div class="container">
-    <div class="row">
-      {{!-- Red Ciudadana --}}
-      <div class="col-12 col-md-8 d-flex">
-        <a href="http://redciudadana.org/" target="_blank" rel="noopener">
-          <img src="mi-guatemala/img/logo-rc-color.png" alt="Logo de Red Ciudanana" class="logo-rc m-auto mt-md-3">
-        </a>
-        <p class="my-auto">Desarrollado por Asociación Civil Red Ciudadana</p>
-      </div>
-      <div class="col-12 col-md-4 d-flex my-4 cc-icons text-left text-md-right">
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/gt/" target="_blank" rel="noopener"
-          class="ml-0 ml-md-auto">
-          <img src="mi-guatemala/img/icon-cc-cc.png" alt="Creative Commons">
-          <img src="mi-guatemala/img/icon-cc-by.png" alt="Creative Commons - Atribución">
-          <img src="mi-guatemala/img/icon-cc-sa.png" alt="Creative Commons - Compartir Igual">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+{{/if}}

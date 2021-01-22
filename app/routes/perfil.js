@@ -73,6 +73,7 @@ export default Route.extend({
    */
   setupController(controller, model) {
     this._super(controller, model);
+    controller.set('applicationController', this.controllerFor('application'));
   },
 
   /**
