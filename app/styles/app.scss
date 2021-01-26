@@ -1,13 +1,14 @@
 // Justiciapedia
 
-$primary: #475660;
-$secondary: #6e6299;
+$primary: #4D5760;
+$secondary: #91C0DB;
 
 $success: #0cab55;
-$warning: #fab026;
+$warning: #F8E0BF;
+$danger: #E0A892;
 
 $dark: #202d3e;
-$light: #f2f2f2;
+$light: #F1F4FA;
 
 // $navbar-color: #3a3a3a;
 $navbar-color: #ffffff;
@@ -39,23 +40,36 @@ $border-radius: 5px;
  */
 
 @font-face {
-  font-family: 'Zona Pro';
-  src: url(/fonts/ZonaPro-Bold.otf) format('opentype');
+  font-family: 'Montserrat';
+  src: url(/fonts/Montserrat-Bold.otf) format('opentype');
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url(/fonts/Lato-Regular.ttf) format('truetype');
-  font-weight: 400;
+  font-family: 'Montserrat';
+  src: url(/fonts/Montserrat-SemiBold.otf) format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/Montserrat-Regular.otf) format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/fonts/Montserrat-Medium.otf) format('opentype');
+  font-weight: 500;
 }
 
 // HTML
 
 body,
 a {
-  font-family: 'Lato';
-  color: #4d5760;
+  font-family: 'Montserrat';
+  color: #4D5760;
+  font-weight: 500;
 }
 
 h1,
@@ -74,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Zona Pro';
+  font-family: 'Montserrat';
 }
 
 // Pagination
@@ -536,7 +550,8 @@ table.table.borderless {
     a {
       padding: 5px 15px;
       border-radius: 160px;
-      font-weight: 200;
+      font-weight: bold;
+      font-size: 1rem;
       line-height: 0.85rem !important;
     }
 
@@ -662,4 +677,8 @@ table.table.borderless {
 
 .perfil-container {
   min-height: 100vh;
+}
+
+.rounded-card {
+  border-radius: 30px !important;
 }

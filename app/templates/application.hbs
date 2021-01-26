@@ -4,7 +4,7 @@
 
 {{#if (not this.embed)}}
   {{!-- Navbar --}}
-  <BsNavbar id="navbar" @backgroundColor="primary" @type="dark" @position="sticky-top" @fluid={{true}} as |navbar|>
+  <BsNavbar id="navbar" @backgroundColor="primary" @type="dark" @position="sticky-top" @fluid={{true}} @toggleBreakpoint="xl" as |navbar|>
     <div class="navbar-header">
       {{navbar.toggle}}
   
