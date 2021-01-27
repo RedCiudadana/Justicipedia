@@ -18,9 +18,9 @@
   <div class="container py-5">
     <div class="row py-5">
       <div class="col-12 col-lg-4 text-center text-lg-left d-flex">
-        <h3 class="mb-4 my-auto">¿Qué es Justiciapedia?</h3>
+        <h3 class="mb-4 my-lg-auto">¿Qué es Justiciapedia?</h3>
       </div>
-      <div class="col-12 col-lg-3 text-center">
+      <div class="col-12 col-lg-3 text-center mb-4">
         <div class="video-container">
           <iframe class="mt-5 mt-md-0" width="460" height="215" src="https://www.youtube.com/embed/cs-sh5ez5Iw"
             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -38,28 +38,38 @@
   </div>
 </div>
 <div class="w-100 bg-light">
-  <div class="container-fluid py-5">
-    <div class="row py-5 text-center">
+  <div class="container py-5">
+    <div class="row justify-content-between py-5 text-center">
       <div class="col-12">
         <h2 class="mb-4 pb-4">Elija la categoría de tu interes</h2>
       </div>
-      <div class="col-12 offset-lg-1 col-lg-5">
-        <h2 class="my-5 py-0 py-md-5 bg-white shadow-sm rounded-card">
-          <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }}>
-            <img src="/img/i-justicia.png" alt="Mazo" class="mr-lg-3">
-            <br class="d-block d-md-none">
-            Sector Justicia
-          </LinkTo>
-        </h2>
+      <div class="col-12 col-lg-5 py-2">
+        <div class="h-100 py-0 py-md-5 bg-white shadow-sm rounded-card row justify-content-center">
+          <div class="col-3 d-flex">
+            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="font-weight-bold my-auto">
+              <img src="/img/iconos/justicia.png" alt="Mazo" class="img-fluid">
+            </LinkTo>
+          </div>
+          <div class="col-5 d-flex">
+            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="font-weight-bold my-auto">
+              <h4>Sector Justicia</h4>
+            </LinkTo>
+          </div>
+        </div>
       </div>
-      <div class="col-12 col-lg-5">
-        <h2 class="my-5 py-0 py-md-5 bg-white shadow-sm rounded-card">
-          <LinkTo @route="perfiles" @model={{"elecciones"}}>
-            <img src="/img/i-personas-d.png" alt="Edificio" class="mr-lg-3">
-            <br class="d-block d-md-none">
-            Comisiones de Postulación
-          </LinkTo>
-        </h2>
+      <div class="col-12 col-lg-5 py-2">
+        <div class="h-100 py-0 py-md-5 bg-white shadow-sm rounded-card row justify-content-center">
+          <div class="col-3 d-flex">
+            <LinkTo @route="perfiles" @model={{"elecciones"}} class="font-weight-bold my-auto">
+              <img src="/img/iconos/personas-color.png" alt="Edificio" class="img-fluid">
+            </LinkTo>
+          </div>
+          <div class="col-5 d-flex">
+            <LinkTo @route="perfiles" @model={{"elecciones"}} class="font-weight-bold my-auto">
+              <h4>Comisiones de Postulación</h4>
+            </LinkTo>
+          </div>
+        </div>
       </div>
     </div>
   </div>
