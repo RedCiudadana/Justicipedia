@@ -1,7 +1,23 @@
+<div class="w-100 bg-secondary">
+  <div class="container text-white py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 text-center">
+        <img src={{this.slider.img}} alt="Balanza" class="mx-w-400 mb-4">
+        <h2>
+          {{this.slider.title}}
+        </h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis dolore ipsam eaque amet, non odio impedit,
+          exercitationem id, quisquam error corrupti. Minus eveniet facilis illum, natus quis voluptatem sequi ratione.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8 py-5">
-      <h2>Buscar perfiles</h2>
+    <div class="col-md-8 py-5 text-center">
+      <h2>Busqueda</h2>
       <PowerSelect
         @placeholder="Busqueda"
         @searchEnabled={{true}}
@@ -38,56 +54,54 @@
 </div>
 
 <Portfolio
-  @bg="light"
+  @bg="white"
   @profiles={{this.profiles}}
   />
 
-<div class="w-100 bg-light">
-  <div class="container">
-    <div class="row text-center">
-      <div class="mx-auto">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <button class="page-link" href="#" aria-label="Previous" {{on "click" this.prevPage}}>
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
+<div class="container">
+  <div class="row text-center mb-4">
+    <div class="mx-auto">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <button class="page-link" href="#" aria-label="Previous" {{on "click" this.prevPage}}>
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </button>
+          </li>
+          {{#each this.pages as |page|}}
+            <li class="page-item {{if (eq this.page page) "active"}}">
+              <button class="page-link" {{on "click" (fn this.selectPage page)}}>
+                {{page}}
               </button>
             </li>
-            {{#each this.pages as |page|}}
-              <li class="page-item {{if (eq this.page page) "active"}}">
-                <button class="page-link" {{on "click" (fn this.selectPage page)}}>
-                  {{page}}
-                </button>
-              </li>
-            {{/each}}
-            <li class="page-item">
-              <button class="page-link" href="#" aria-label="Next" {{on "click" this.nextPage}}>
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          {{/each}}
+          <li class="page-item">
+            <button class="page-link" href="#" aria-label="Next" {{on "click" this.nextPage}}>
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
-    {{#if (eq model.firstObject._internalModel.modelName "institution")}}
-      {{!-- Organigrama --}}
-      <div class="row">
-        <div class="col-12">
-          <div class="panel">
-            <div class="header d-flex bg-primary">
-              <img src="img/i-orgchart.png" alt="Iconos de personas">
-              <h3>Sector Justicia</h3>
-            </div>
-            <div>
-              <div class="body p-4">
-                <Orgchart class="w-100 bg-red" />
-              </div>
+  </div>
+  {{#if (eq model.firstObject._internalModel.modelName "institution")}}
+    {{!-- Organigrama --}}
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="panel">
+          <div class="header d-flex bg-primary">
+            <img src="img/i-orgchart.png" alt="Iconos de personas">
+            <h3>Sector Justicia</h3>
+          </div>
+          <div>
+            <div class="body p-4">
+              <Orgchart class="w-100 bg-red" />
             </div>
           </div>
         </div>
       </div>
-    {{/if}}
-  </div>
+    </div>
+  {{/if}}
 </div>

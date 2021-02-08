@@ -6,6 +6,21 @@ const resolver = {
   perfiles: 'profile'
 };
 
+const slider = {
+  instituciones: {
+    title: 'Sector Justicia',
+    img: '/img/iconos/justicia-circle.png'
+  },
+  elecciones: {
+    title: 'Comisiones de Postulación',
+    img: '/img/iconos/personas-color-alt-circle.png'
+  },
+  perfiles: {
+    title: 'Perfiles',
+    img: '/img/iconos/personas-color-circle.png'
+  },
+};
+
 export default Route.extend({
   resolver: resolver,
   queryParams: {
@@ -17,6 +32,8 @@ export default Route.extend({
   },
 
   model({ model, sector }) {
+    this.set('modelName', model);
+
     let modelName = this.resolver[model];
     if(sector) {
       return this.store.query(modelName, {
@@ -29,5 +46,6 @@ export default Route.extend({
     this._super(controller, model);
     controller.set('allProfiles', model.toArray());
     controller.set('config', model.firstObject);
+    controller.set('slider', slider[this.get('modelName')]);
   }
 });

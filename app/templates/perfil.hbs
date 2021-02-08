@@ -4,7 +4,13 @@
 <div class="w-100 bg-light perfil-container">
   <section class="container profile my-4 py-4">
 
-    <ProfileFunctionalities @model={{model}} @embed={{this.applicationController.embed}} />
+    {{#if (not this.applicationController.embed)}}
+      <ProfileFunctionalities @model={{model}} @embed={{this.applicationController.embed}} />
+    {{!-- {{else}}
+      <LinkTo @route="perfil.index" @models={{array "instituciones" model.profile.id}}>
+        Atras
+      </LinkTo> --}}
+    {{/if}}
 
     {{outlet}}
 
