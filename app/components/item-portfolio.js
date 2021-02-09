@@ -13,8 +13,12 @@ export default class ItemPortfolioComponent extends Component {
     this.set('classNames', ['mb-4', 'col-12', 'col-sm-12', 'col-md-4', 'col-xl-3']);
   }
 
+  modelName;
+
   didReceiveAttrs() {
     super.didReceiveAttrs(...arguments);
-    this.set('modelName', resolver[this.profile._internalModel.modelName]);
+    if (!this.modelName) {
+      this.set('modelName', resolver[this.profile._internalModel.modelName])
+    }
   }
 }

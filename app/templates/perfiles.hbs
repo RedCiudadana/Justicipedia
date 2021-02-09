@@ -14,27 +14,18 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8 py-5 text-center">
-      <h2>Busqueda</h2>
-      <PowerSelect
-        @placeholder="Busqueda"
-        @searchEnabled={{true}}
-        @searchField="nombre"
-        @options={{model}}
-        @onChange={{action "toProfile"}} as |profile|>
-        {{profile.nombre}}
-      </PowerSelect>
-      {{#if (eq model.firstObject._internalModel.modelName "profile")}}
-        <PowerSelect
-          class="my-auto ml-2 w-100"
-          @placeholder="Filtrar por institución"
-          @searchEnabled={{true}}
-          @searchField="nombre"
-          @allowClear="true"
-          @selected={{this.inInstitution}}
-          @options={{this.institutions}}
+{{#if (not this.embed)}}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 py-5 text-center">
+        <h2>Busqueda</h2>
+        <PowerSelect @placeholder="Busqueda" @searchEnabled={{true}} @searchField="nombre" @options={{model}}
+          @onChange={{action "toProfile" }} as |profile|>
+          {{profile.nombre}}
+        </PowerSelect>
+        {{#if (eq model.firstObject._internalModel.modelName "profile")}}
+        <PowerSelect class="my-auto ml-2 w-100" @placeholder="Filtrar por institución" @searchEnabled={{true}}
+          @searchField="nombre" @allowClear="true" @selected={{this.inInstitution}} @options={{this.institutions}}
           @onChange={{action (mut this.inInstitution)}} as |profile|>
           {{profile.nombre}}
         </PowerSelect>
@@ -48,14 +39,16 @@
             <Input class="my-auto ml-2" @type="checkbox" @checked={{this.isVaron}} />
           </div>
         </nav>
-      {{/if}}
+        {{/if}}
+      </div>
     </div>
   </div>
-</div>
+{{/if}}
 
 <Portfolio
   @bg="white"
   @profiles={{this.profiles}}
+  @modelName={{this.modelName}}
   />
 
 <div class="container">
