@@ -36,19 +36,24 @@ export default Route.extend({
     comisionados: {
       refreshModel: true
     },
+    comisiones: {
+      refreshModel: true
+    },
     page: { refreshModel: false },
     size: { refreshModel: false }
   },
 
   spreadsheets: service(),
 
-  model({ model, sector, candidatos, comisionados }) {
+  model({ model, sector, candidatos, comisionados, comisiones }) {
     let controllerApplication = this.controllerFor('application');
     this.set('controllerApplication', controllerApplication);
 
     this.set('modelName', model);
 
     let modelName = this.resolver[model];
+
+    this.slider = slider[this.get('modelName')];
 
     if(sector) {
       return this.store.query(modelName, {
@@ -57,6 +62,7 @@ export default Route.extend({
     }
 
     if (comisionados) {
+      this.set('slider.title', 'Comisionados');
       return this.store.query('election', {
         institution: comisionados
       }).then((elecciones) => {
@@ -86,6 +92,7 @@ export default Route.extend({
     }
 
     if(candidatos) {
+      this.set('slider.title', 'Candidatos');
       return this.store.query('election', {
         institution: candidatos
       }).then((elecciones) => {
@@ -114,6 +121,15 @@ export default Route.extend({
       });
     }
 
+    if (comisiones) {
+      this.set('slider.title', 'Comisiones de Postulación');
+      return this.store.query('election', {
+        institution: comisiones
+      }).then((elecciones) => {
+        return elecciones;
+      });
+    }
+
     return this.store.findAll(modelName, { reload: true });
   },
 
@@ -121,7 +137,7 @@ export default Route.extend({
     this._super(controller, model);
     controller.set('allProfiles', model.toArray());
     controller.set('config', model.firstObject);
-    controller.set('slider', slider[this.get('modelName')]);
+    controller.set('slider', this.slider);
     controller.set('modelName', this.modelName);
     controller.set('embed', this.controllerApplication.embed);
   }
