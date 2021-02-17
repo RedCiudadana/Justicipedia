@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 import { isEmpty } from '@ember/utils';
 import { isBlank } from '@ember/utils';
 
+
 const resolver = {
   instituciones: 'institution',
   elecciones: 'election',
@@ -70,15 +71,17 @@ export default Route.extend({
         return this.spreadsheets.fetch(modelName).then((perfiles) => {
           perfiles = perfiles.filter((perfil) => {
             if (isBlank(perfil.fotoURL)) {
-              if (perfil.sexo === 'Masculino') {
+              if (perfil.sexo && perfil.sexo.toLowerCase() === 'masculino') {
                 perfil.photo = 'mi-guatemala/img/candidato.png';
               }
 
-              if (perfil.sexo === 'Femenino') {
+              if (perfil.sexo && perfil.sexo.toLowerCase() === 'femenino') {
                 perfil.photo = 'mi-guatemala/img/candidata.png';
               }
 
-              perfil.photo = 'mi-guatemala/img/candidata.png';
+              if (isBlank(perfil.sexo)) {
+                perfil.photo = 'mi-guatemala/img/candidata.png';
+              }
             } else {
               perfil.photo = perfil.fotoURL;
             }
@@ -100,15 +103,18 @@ export default Route.extend({
         return this.spreadsheets.fetch(modelName).then((perfiles) => {
           perfiles = perfiles.filter((perfil) => {
             if (isBlank(perfil.fotoURL)) {
-              if (perfil.sexo === 'Masculino') {
+              if (perfil.sexo && perfil.sexo.toLowerCase() === 'masculino') {
+                console.log('dude wtf');
                 perfil.photo = 'mi-guatemala/img/candidato.png';
               }
 
-              if (perfil.sexo === 'Femenino') {
+              if (perfil.sexo && perfil.sexo.toLowerCase() === 'femenino') {
                 perfil.photo = 'mi-guatemala/img/candidata.png';
               }
 
-              perfil.photo = 'mi-guatemala/img/candidata.png';
+              if (isBlank(perfil.sexo)) {
+                perfil.photo = 'mi-guatemala/img/candidata.png';
+              }
             } else {
               perfil.photo = perfil.fotoURL;
             }
