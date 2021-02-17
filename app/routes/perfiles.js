@@ -1,6 +1,5 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import { isEmpty } from '@ember/utils';
 import { isBlank } from '@ember/utils';
 
 
@@ -104,7 +103,6 @@ export default Route.extend({
           perfiles = perfiles.filter((perfil) => {
             if (isBlank(perfil.fotoURL)) {
               if (perfil.sexo && perfil.sexo.toLowerCase() === 'masculino') {
-                console.log('dude wtf');
                 perfil.photo = 'mi-guatemala/img/candidato.png';
               }
 
