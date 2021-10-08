@@ -28,11 +28,11 @@
       @extend .rounded;
       border-width: 0 !important;
       font-weight: 400;
-      background-color: $warning !important;
+      background-color: $secondary !important;
       color: white !important;
-      .img-white {
-        filter: brightness(0) invert(1);
-      }
+      // .img-white {
+      //   filter: brightness(0) invert(1);
+      // }
     }
   }
 

@@ -73,16 +73,16 @@ export default Component.extend({
               return d.id;
             },
             getHeight: function getHeight() {
-              return 16;
+              return 6;
             },
             getWidth: function getWidth() {
-              return 16;
+              return 6;
             },
             getVGap: function getVGap() {
-              return 10;
+              return 20;
             },
             getHGap: function getHGap() {
-              return 100;
+              return 20;
             }
           }
         });
@@ -91,10 +91,10 @@ export default Component.extend({
           return {
             label: node.name,
             labelCfg: {
-              offset: 10,
+              offset: 40,
               position: !isSM ? node.children ? 'top' : 'rigth' : node.children ? 'rigth' : 'bottom',
               style: {
-                fontSize: 20,
+                fontSize: 16,
                 rotate: !isSM ? 0 : node.children ? 0 : 90,
                 textAlign: 'start'
               }

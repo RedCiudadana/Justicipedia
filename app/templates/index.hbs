@@ -41,18 +41,18 @@
   <div class="container py-5">
     <div class="row justify-content-between py-5 text-center">
       <div class="col-12">
-        <h2 class="mb-4 pb-4">Elija la categoría de tu interes</h2>
+        <h2 class="mb-4 pb-4">Elija la categoría de su interés</h2>
       </div>
       <div class="col-12 col-lg-5 py-2">
         <div class="h-100 py-0 py-md-5 bg-white shadow-sm rounded-card row justify-content-center">
           <div class="col-3 d-flex">
-            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="font-weight-bold my-auto">
+            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="my-auto">
               <img src="/img/iconos/justicia.png" alt="Mazo" class="img-fluid">
             </LinkTo>
           </div>
           <div class="col-5 d-flex">
-            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="font-weight-bold my-auto">
-              <h4>Sector Justicia</h4>
+            <LinkTo @route="perfiles" @model={{"instituciones"}} @query={{hash sector="justicia" }} class="my-auto">
+              <h5 class="font-weight-semibold text-left">Sector Justicia</h5>
             </LinkTo>
           </div>
         </div>
@@ -60,13 +60,13 @@
       <div class="col-12 col-lg-5 py-2">
         <div class="h-100 py-0 py-md-5 bg-white shadow-sm rounded-card row justify-content-center">
           <div class="col-3 d-flex">
-            <LinkTo @route="perfiles" @model={{"elecciones"}} class="font-weight-bold my-auto">
+            <LinkTo @route="perfiles" @model={{"elecciones"}} class="my-auto">
               <img src="/img/iconos/personas-color.png" alt="Edificio" class="img-fluid">
             </LinkTo>
           </div>
           <div class="col-5 d-flex">
-            <LinkTo @route="perfiles" @model={{"elecciones"}} class="font-weight-bold my-auto">
-              <h4>Comisiones de Postulación</h4>
+            <LinkTo @route="perfiles" @model={{"elecciones"}} class="my-auto">
+              <h5 class="font-weight-semibold text-left">Comisiones de Postulación</h5>
             </LinkTo>
           </div>
         </div>
