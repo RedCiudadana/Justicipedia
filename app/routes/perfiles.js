@@ -16,7 +16,7 @@ const slider = {
   },
   elecciones: {
     title: 'Comisiones de Postulación',
-    img: '/img/iconos/img/iconos/personas-color-alt-circle.png'
+    img: '/img/iconos/personas-color-alt-circle.png'
   },
   perfiles: {
     title: 'Perfiles',
