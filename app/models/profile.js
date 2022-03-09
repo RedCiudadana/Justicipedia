@@ -26,6 +26,8 @@ export default Model.extend({
   correo: attr('string'),
   tw: attr('string'),
   fb: attr('string'),
+  fuenteTexto: attr('string'),
+  fuenteURL: attr('string'),
 
   // Documentos
   cv: attr('string'),

@@ -100,7 +100,7 @@ export default Component.extend({
         {
           route: "perfil.candidatos",
           img: "img/iconos/personas-color.png",
-          text: "Candidatos",
+          text: "Candidaturas",
           disabled: candidates.length < 1
         },
         {

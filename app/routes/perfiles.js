@@ -94,7 +94,7 @@ export default Route.extend({
     }
 
     if(candidatos) {
-      this.set('slider.title', 'Candidatos');
+      this.set('slider.title', 'Candidaturas');
       return this.store.query('election', {
         institution: candidatos
       }).then((elecciones) => {

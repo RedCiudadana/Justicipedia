@@ -46,11 +46,17 @@
 {{/if}}
 
 {{#if this.profiles}}
-  <Portfolio
-    @bg="white"
-    @profiles={{this.profiles}}
-    @modelName={{this.modelName}}
-    />
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <Portfolio
+          @bg="white"
+          @profiles={{this.profiles}}
+          @modelName={{this.modelName}}
+          />
+      </div>
+    </div>
+  </div>
 {{else}}
   <div class="container">
     <div class="row">
