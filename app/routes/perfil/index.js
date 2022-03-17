@@ -17,7 +17,8 @@ export default Route.extend({
         {
           puesto: 'Puesto',
           profesion: 'Profesión',
-          nocolegiado: 'No. Colegiado'
+          nocolegiado: 'No. Colegiado',
+          estado: 'Estado'
         });
     }
 

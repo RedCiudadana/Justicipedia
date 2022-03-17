@@ -14,6 +14,7 @@ export default Model.extend({
   departamento: attr('string'),
   institucion: attr('string'),
   fechalaboral: attr('string'),
+  estado: attr('string'),
   nocolegiado: attr('string'),
   estadocivil: attr('string'),
   profesion: attr('string'),

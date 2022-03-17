@@ -39,13 +39,16 @@ export default Route.extend({
     comisiones: {
       refreshModel: true
     },
+    estado: {
+      refreshModel: true
+    },
     page: { refreshModel: false },
     size: { refreshModel: false }
   },
 
   spreadsheets: service(),
 
-  model({ model, sector, candidatos, comisionados, comisiones }) {
+  model({ model, sector, candidatos, comisionados, comisiones, estado }) {
     let controllerApplication = this.controllerFor('application');
     this.set('controllerApplication', controllerApplication);
 
@@ -94,7 +97,7 @@ export default Route.extend({
     }
 
     if(candidatos) {
-      this.set('slider.title', 'Candidaturas');
+      this.set('slider.title', 'Aspirantes');
       return this.store.query('election', {
         institution: candidatos
       }).then((elecciones) => {
@@ -115,6 +118,10 @@ export default Route.extend({
               }
             } else {
               perfil.photo = perfil.fotoURL;
+            }
+
+            if (estado && estado !== perfil.estado) {
+              return false;
             }
 
             return elecciones.includes(perfil.election);
