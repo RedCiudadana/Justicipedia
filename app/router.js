@@ -21,4 +21,5 @@ Router.map(function() {
   this.route('perfiles', { path: '/:model'});
   this.route('preguntas');
   this.route('test');
+  this.route('tachas');
 });

@@ -1,0 +1,35 @@
+{{outlet}}
+
+{{log model}}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Numero</th>
+            <th>Objeciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model as |objecion|}}
+            <tr>
+              <td>
+                <LinkTo @route="perfil" @models={{array "perfil" objecion.profile.id}} class="text-black bold">
+                  {{ objecion.nombre }}
+                </LinkTo>
+              </td>
+              <td>
+                {{ objecion.numero }}
+              </td>
+              <td>
+                {{ objecion.objecion }}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
