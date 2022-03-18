@@ -57757,7 +57757,7 @@
     "puesto": "Comisión de Postulación - Decana Regional",
     "dependencia": "Universidad Regional",
     "departamento": "",
-    "institution": "",
+    "institution": 0,
     "seleccionarInstitución": "",
     "election": 0,
     "seleccionarElección": "",

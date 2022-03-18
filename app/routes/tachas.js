@@ -32,7 +32,6 @@ export default Route.extend({
           return _data;
         });
 
-        console.log(perfiles); 
         return {
           perfiles,
           conceptos

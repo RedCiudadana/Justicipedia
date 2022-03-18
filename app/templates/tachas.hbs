@@ -17,7 +17,7 @@
           {{#each model.tachas as |objecion|}}
             <tr>
               <td>
-                <LinkTo @route="perfil" @models={{array "perfil" objecion.profile.id}} class="text-black bold">
+                <LinkTo @route="perfil" @models={{array "perfiles" objecion.profile.id}} class="text-black bold">
                   {{ objecion.nombre }}
                 </LinkTo>
               </td>
@@ -49,7 +49,7 @@
             {{#with perfilData.perfil as |perfil|}}
               <tr>
                 <td>
-                  <LinkTo @route="perfil" @models={{array "perfil" perfil.id}} class="text-black bold">
+                  <LinkTo @route="perfil" @models={{array "perfiles" perfil.profile.id}} class="text-black bold">
                     {{ perfil.nombre }}
                   </LinkTo>
                 </td>
