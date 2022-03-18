@@ -4,6 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <h1>Objeciones</h1>
       <table class="table">
         <thead>
           <tr>
@@ -13,7 +14,7 @@
           </tr>
         </thead>
         <tbody>
-          {{#each model as |objecion|}}
+          {{#each model.tachas as |objecion|}}
             <tr>
               <td>
                 <LinkTo @route="perfil" @models={{array "perfil" objecion.profile.id}} class="text-black bold">
@@ -27,6 +28,41 @@
                 {{ objecion.objecion }}
               </td>
             </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 mt-4">
+      <h1>Tabla de Gradación</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            {{#each model.gradacion.conceptos as |concepto|}}
+              <th>{{concepto}}</th>
+            {{/each}}
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model.gradacion.perfiles as |perfilData|}}
+            {{#with perfilData.perfil as |perfil|}}
+              <tr>
+                <td>
+                  <LinkTo @route="perfil" @models={{array "perfil" perfil.id}} class="text-black bold">
+                    {{ perfil.nombre }}
+                  </LinkTo>
+                </td>
+                {{#each model.gradacion.conceptos as |concepto|}}
+                  <td>
+                    {{get perfilData concepto}}
+                  </td>
+                {{/each}}
+                <td>
+                  {{perfilData.total}}
+                </td>
+              </tr>
+            {{/with}}
           {{/each}}
         </tbody>
       </table>
