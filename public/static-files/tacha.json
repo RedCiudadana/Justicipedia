@@ -4,11 +4,19 @@
     "profile": "perfil-1679",
     "nombre": "María Consuelo Porras",
     "comission": "election-2",
-    "numero": 12,
+    "numero": 15,
     "objecion": "Falta de idoneidad y honorabilidad. Debilitamiento de FECI, baja especialización de las fiscalías, consecuencias con EEUU, persecución a fiscales, plagio de tesis doctoral, vulneración de derechos de miembros del MP e inclusión en lista Engel de agentes antidemocráticos"
   },
   {
     "id": 2,
+    "profile": "perfil-1680",
+    "nombre": "José Enrique Urrutia",
+    "comission": "election-2",
+    "numero": 5,
+    "objecion": "Incumplimiento de méritos académicos, acciones legales contra FECI, vinculación con Fundación contra el Terrorismo y acusaciones de hostigar defensores de DDHH y periodistas"
+  },
+  {
+    "id": 3,
     "profile": "perfil-1670",
     "nombre": "Jorge Luis Donado",
     "comission": "election-2",
@@ -16,20 +24,12 @@
     "objecion": "Falta de idoneidad y honorabilidad. Incumplimiento de deberes en PGN y conducta inapropiada ante la CIDH"
   },
   {
-    "id": 3,
+    "id": 4,
     "profile": "perfil-1663",
     "nombre": "Henry Alejandro Elías",
     "comission": "election-2",
     "numero": 3,
     "objecion": "Participación y señalamientos en el caso Comisiones Paralelas y mal aplicación de ley de feminicidio"
-  },
-  {
-    "id": 4,
-    "profile": "perfil-1680",
-    "nombre": "José Enrique Urrutia",
-    "comission": "election-2",
-    "numero": 3,
-    "objecion": "Incumplimiento de méritos académicos, acciones legales contra FECI, vinculación con Fundación contra el Terrorismo y acusaciones de hostigar defensores de DDHH y periodistas"
   },
   {
     "id": 5,
@@ -53,7 +53,7 @@
     "nombre": "Néctor de León Ramírez",
     "comission": "election-2",
     "numero": 1,
-    "objecion": "No indica razones fácticas"
+    "objecion": "Incumplimiento de requisitos éticos"
   },
   {
     "id": 8,

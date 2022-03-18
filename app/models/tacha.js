@@ -1,6 +1,4 @@
 import Model, { belongsTo, attr } from '@ember-data/model';
-import { isBlank } from '@ember/utils';
-import { computed } from '@ember/object';
 
 export default Model.extend({
   profile: belongsTo('profile'),
