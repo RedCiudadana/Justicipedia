@@ -83,7 +83,7 @@
     "node-sass": "^4.9.3",
     "prember": "^1.0.3",
     "sass": "^1.14.0",
-    "stylelint": "^13.0.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^19.0.0",
     "tabletop": "^1.5.2",
     "yuidoc-ember-theme": "^2.0.1"
